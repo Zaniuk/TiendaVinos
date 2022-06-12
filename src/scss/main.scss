@@ -46,15 +46,33 @@ body{
             padding: .7rem;
             background-color: $dark;
             color: #B11226;
+            
+            
         }
     }
     .landing{
         text-align: center;
         display: flex;
         justify-content: center;
-        align-items: center;
+    
+    
     }
 }
+
+#landing-1{
+    background-image: url("../../public/img/backgrounds/image-1.png");
+    
+}
+#landing-2{
+    background-image: url("../../public/img/backgrounds/image-2.png");
+    
+}
+#landing-3{
+    background-image: url("../../public/img/backgrounds/image-3.png");
+    
+    
+}
+
 
 #shop{
     background-color: $dark;
