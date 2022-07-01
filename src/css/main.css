@@ -87,18 +87,26 @@ body {
   background-color: #120204;
 }
 .navbar .desplegable .desplegable-conte {
+<<<<<<< HEAD
   margin-top: 0vh;
+=======
+  margin-top: 20vh;
+>>>>>>> 298d99e88a078a1bc44b329faf5ac25e3bd61d89
 }
 .navbar .desplegable .linea-contenido-sola {
   text-decoration: none;
   color: white;
   display: block;
+<<<<<<< HEAD
   font-size: 5vh;
   margin-top: 5vh;
 }
 
 #linea-contenido1 {
   margin-top: 20vh;
+=======
+  margin-top: 5vh;
+>>>>>>> 298d99e88a078a1bc44b329faf5ac25e3bd61d89
 }
 
 .linea-contenido-sola {
