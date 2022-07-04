@@ -1,5 +1,4 @@
 
-
 const menu = document.getElementById("menu")
 const desplegable = document.getElementById("desplegable")
 

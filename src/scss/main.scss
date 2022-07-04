@@ -142,16 +142,34 @@ body{
             max-width: 540px;
             padding: .7rem;
             background-color: $dark;
-            color: $strong-wine;
+
+            color: #B11226;
         }
     }
     .landing{
         text-align: center;
         display: flex;
         justify-content: center;
-        align-items: center;
+    
+    
     }
 }
+
+#landing-1{
+    background-image: url("../../public/img/backgrounds/image-1.png");
+    
+}
+#landing-2{
+    background-image: url("../../public/img/backgrounds/image-2.png");
+    
+}
+#landing-3{
+    background-image: url("../../public/img/backgrounds/image-3.png");
+    
+    
+}
+
+
 
 
 #featured{
@@ -219,7 +237,7 @@ body{
             
         }
     }
-}
+
 #shop{
     display: grid;
     justify-items: center;
@@ -286,4 +304,5 @@ body{
             }
         }
     }
-}   
+}
+
