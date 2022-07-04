@@ -39,23 +39,94 @@ body {
   background-color: #120204;
   color: #B11226;
 }
-.container .landing {
+*{
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body{
+
+  background-color:blanchedalmond
+}
+
+
+h2{
   text-align: center;
-  display: flex;
-  justify-content: center;
+  font-size: 60px;
+  font-family: JUNGE;
+  margin-top: 80px;
+  color: brown;
+  text-shadow: 0px 0px 6px beige;
+
+
 }
 
-#landing-1 {
-  background-image: url("../../public/img/backgrounds/image-1.png");
+.content-all{
+  width: 230px;
+  margin: auto;
+  perspective: 1000PX;
+  position: relative;
+  margin-top: 50px;
 }
 
-#landing-2 {
-  background-image: url("../../public/img/backgrounds/image-2.png");
+
+.content-carrusel{
+  width: 100%;
+  position: absolute;
+  animation: rotar 10s infinite linear;
+  transform-style: preserve-3d;
+}
+.content-carrusel:hover{
+  animation-play-state: paused;
+  cursor: pointer;
+
 }
 
-#landing-3 {
-  background-image: url("../../public/img/backgrounds/image-3.png");
+.content-carrusel figure{
+  width: 100%;
+  height: 140%;
+  position: absolute;
+  
+  box-shadow: 0px 0px 20px 0px black;
 }
+
+.content-carrusel figure:nth-child(1){transform: rotateY(0deg)translateZ(300PX)
+  ;}
+.content-carrusel figure:nth-child(2){transform: rotateY(60deg)translateZ(300PX)
+  ;}
+.content-carrusel figure:nth-child(3){transform: rotateY(120deg)translateZ(300PX)
+  ;}
+.content-carrusel figure:nth-child(4){transform: rotateY(180deg)translateZ(300PX)
+  ;}
+.content-carrusel figure:nth-child(5){transform: rotateY(240deg)translateZ(300PX)
+  ;}
+.content-carrusel figure:nth-child(6){transform: rotateY(300deg)translateZ(300PX)
+  ;}
+.content-carrusel figure:nth-child(7){transform: rotateY(360deg)translateZ(300PX)
+  ;}
+
+
+.content-carrusel img{
+  width: 100%;
+
+
+}
+
+.content-carrusel img:hover{
+  transform:  scale(1.2);
+  transition: all 300ms;
+}
+
+
+@keyframes rotar{
+  from{transform: rotateY(0deg);  
+   }to{transform: rotateY(360deg);
+
+}
+}
+
+
 
 #shop {
   background-color: #120204;
@@ -97,5 +168,6 @@ body {
   border-radius: 1.2rem;
   background-color: #0075C4;
 }
+
 
 /*# sourceMappingURL=main.css.map */
