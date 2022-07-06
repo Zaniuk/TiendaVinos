@@ -203,6 +203,30 @@ body {
     justify-content: space-around;
   }
 }
+#my-keen-slider {
+  position: static;
+  z-index: 400;
+}
+
+[class^=number-slide],
+[class*=" number-slide"] {
+  background: #140305;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 500;
+  height: 600px;
+  max-height: 100vh;
+  position: relative;
+  z-index: -1;
+}
+
+.number-slide img {
+  height: 100%;
+}
+
 #shop {
   display: grid;
   justify-items: center;

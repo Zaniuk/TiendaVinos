@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,13 @@
     <title>Wine Valley</title>
     <link rel="stylesheet" href="./css/main.css">
     <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/keen-slider@6.7.0/keen-slider.min.css"
+  />
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
 </head>
+
 <body>
     <header class="navbar">
         <div class="navbar-flex">
@@ -27,21 +34,8 @@
             </nav>
     </header>
     <main class="container">
-        <section class="landing">
-            <div class="text-box">
-                <h1>"A good wine makes special any ocassion"</h1>
-            </div>
-        </section>
-        <section class="landing">
-            <div class="text-box">
-                <h1>"Life is too short to drink bad wine"</h1>
-            </div>
-        </section>
-        <section class="landing">
-            <div class="text-box">
-                <h1>"Wine is bottled poetry"</h1>
-            </div>
-        </section>
+        
+        
         <section id="featured">
             <div class="title">
                 <h1>OUR BEST SELLER</h1>
@@ -66,10 +60,35 @@
                     <li>Italy</li>
                 </ul>
             </div>
-
+            
 
         </section>
-
+        <div class="c-wrapper">
+            <div id="my-keen-slider" class="keen-slider">
+                <div class="keen-slider__slide number-slide">
+                    <img src="../public/carr/img1.jpg" alt="">
+                </div>
+                <div class="keen-slider__slide number-slide">
+                    <img src="../public/carr/img2.jpg" alt="">
+                </div>
+                <div class="keen-slider__slide number-slide">
+                    <img src="../public/carr/img3.jpg" alt="">
+                </div>
+                <div class="keen-slider__slide number-slide">
+                    <img src="../public/carr/img4.jpg" alt="">
+                </div>
+                <div class="keen-slider__slide number-slide">
+                    <img src="../public/carr/img5.jpg" alt="">
+                </div>
+                <div class="keen-slider__slide number-slide">
+                    <img src="../public/carr/img6.jpg" alt="">
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.7.0/keen-slider.min.js"></script>
+            <script>
+                var slider = new KeenSlider("#my-keen-slider")
+            </script>
+        </div>
         <section id="shop">
             <div class="wine">
                 <div class="img-wrapper">
@@ -316,4 +335,5 @@
 
     <script src="./js/app.js"></script>
 </body>
+
 </html>

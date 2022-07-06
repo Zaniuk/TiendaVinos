@@ -13,7 +13,7 @@ menu.addEventListener("click",() => {
 })
 
 const button = document.querySelector('#button');
-const tooltip = document.querySelector('#tooltip');
+const tooltip11 = document.querySelector('#tooltip1');
 
 // Pass the button, the tooltip, and some options, and Popper will do the
 // magic positioning for you:
