@@ -9,21 +9,22 @@ $menu: 'Junge', serif;
 $olive: #9E6C16;
 $strong-wine: #B11226;
 $dark-wine: #58181F;
-$card-dark-wine: #140305;;
+$card-dark-wine: #140305;
+$card-dark-wine-hover: #240609;
 $dark: #120204;
 $lblue: #0075C4;
 //Estilos generales
 body{
     margin: 0;
     font-family: $menu;
-    background-color: rgb(7, 7, 7);
+    background-color: rgb(8, 1, 1);
 }
 #logo{
     top: 2vh;
     left: 2vh;
     height:13vh;
-    position: relative;
-    z-index: 1000;
+    position: fixed;
+    
 }
 #menu-icon{
     cursor: pointer;
@@ -75,8 +76,8 @@ body{
 }
 
 .navbar{
-    background-color: $dark;
-    position: fixed;
+    background-color: rgb(8, 1, 1);
+    position: static;
     top: 0;
     width: 100%;
     height: 15vh;
@@ -142,16 +143,19 @@ body{
             max-width: 540px;
             padding: .7rem;
             background-color: $dark;
-            color: $strong-wine;
+
+            color: #B11226;
         }
     }
     .landing{
         text-align: center;
         display: flex;
         justify-content: center;
-        align-items: center;
+    
+    
     }
 }
+
 
 
 #featured{
@@ -202,10 +206,29 @@ body{
     }
 }
 @media screen and (max-width: 800px) {
+    #logo{
+        position: absolute;
+    }
+    .menu{
+        top: 40px;
+        right: 8px;
+    }
+    .line1,.line2,.line3{
+        width: 5vh;
+        height: .8vh;
+
+    }
+    #menu-icon{
+        height: 100px;
+    }
     #featured{
         flex-flow: column;
         justify-content: center;
         align-items: center;
+       
+        .title{
+            width: 80%;
+        }
         .menu-wrapper {
             height: max-content;
             width: 100%;
@@ -220,7 +243,14 @@ body{
         }
     }
 }
-
+.hide-tooltip{
+    display: none;
+}
+#tooltip{
+    background-color: $dark;
+    padding: 1rem 1.2rem;
+    font-weight: 600;
+}
 #my-keen-slider{
     position: static;
     z-index: 400;
@@ -257,9 +287,14 @@ body{
         display: flex;
         margin-top: .5rem;
         margin-bottom: .5rem;
-            flex-flow: column nowrap;
-            align-items: center;
+        flex-flow: column nowrap;
+        align-items: center;
         max-width: 250px;
+        border-radius: 1rem;
+        transition: 250ms ease-in-out;
+        &:hover{
+            background-color: $card-dark-wine-hover;
+        }
         .img-wrapper{
             text-align: center;
             height:15rem;
