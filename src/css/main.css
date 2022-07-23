@@ -2,15 +2,14 @@
 body {
   margin: 0;
   font-family: "Junge", serif;
-  background-color: #070707;
+  background-color: #080101;
 }
 
 #logo {
   top: 2vh;
   left: 2vh;
   height: 13vh;
-  position: relative;
-  z-index: 1000;
+  position: fixed;
 }
 
 #menu-icon {
@@ -61,8 +60,8 @@ body {
 }
 
 .navbar {
-  background-color: #120204;
-  position: fixed;
+  background-color: #080101;
+  position: static;
   top: 0;
   width: 100%;
   height: 15vh;
@@ -133,95 +132,11 @@ body {
   background-color: #120204;
   color: #B11226;
 }
-*{
-  margin: 0;
-  padding: 0%;
-  box-sizing: border-box;
-}
-
-body{
-
-  background-color:blanchedalmond
-}
-
-
-h2{
+.container .landing {
   text-align: center;
-  font-size: 60px;
-  font-family: JUNGE;
-  margin-top: 80px;
-  color: brown;
-  text-shadow: 0px 0px 6px beige;
-
-
+  display: flex;
+  justify-content: center;
 }
-
-
-.content-all{
-  width: 230px;
-  margin: auto;
-  perspective: 1000PX;
-  position: relative;
-  margin-top: 50px;
-}
-
-
-.content-carrusel{
-  width: 100%;
-  position: absolute;
-  animation: rotar 10s infinite linear;
-  transform-style: preserve-3d;
-}
-.content-carrusel:hover{
-  animation-play-state: paused;
-  cursor: pointer;
-
-}
-
-.content-carrusel figure{
-  width: 100%;
-  height: 140%;
-  position: absolute;
-  
-  box-shadow: 0px 0px 20px 0px black;
-}
-
-.content-carrusel figure:nth-child(1){transform: rotateY(0deg)translateZ(300PX)
-  ;}
-.content-carrusel figure:nth-child(2){transform: rotateY(60deg)translateZ(300PX)
-  ;}
-.content-carrusel figure:nth-child(3){transform: rotateY(120deg)translateZ(300PX)
-  ;}
-.content-carrusel figure:nth-child(4){transform: rotateY(180deg)translateZ(300PX)
-  ;}
-.content-carrusel figure:nth-child(5){transform: rotateY(240deg)translateZ(300PX)
-  ;}
-.content-carrusel figure:nth-child(6){transform: rotateY(300deg)translateZ(300PX)
-  ;}
-.content-carrusel figure:nth-child(7){transform: rotateY(360deg)translateZ(300PX)
-  ;}
-
-
-.content-carrusel img{
-  width: 100%;
-
-
-}
-
-.content-carrusel img:hover{
-  transform:  scale(1.2);
-  transition: all 300ms;
-}
-
-
-@keyframes rotar{
-  from{transform: rotateY(0deg);  
-   }to{transform: rotateY(360deg);
-
-}
-}
-
-
 
 #featured {
   background-image: url("../../public/img/backgrounds/marvin-l-61sZcZl3Mlk-unsplash (1).jpg");
@@ -269,10 +184,31 @@ h2{
 }
 
 @media screen and (max-width: 800px) {
+  #logo {
+    position: absolute;
+  }
+
+  .menu {
+    top: 40px;
+    right: 8px;
+  }
+
+  .line1, .line2, .line3 {
+    width: 5vh;
+    height: 0.8vh;
+  }
+
+  #menu-icon {
+    height: 100px;
+  }
+
   #featured {
     flex-flow: column;
     justify-content: center;
     align-items: center;
+  }
+  #featured .title {
+    width: 80%;
   }
   #featured .menu-wrapper {
     height: max-content;
@@ -286,6 +222,40 @@ h2{
     justify-content: space-around;
   }
 }
+.hide-tooltip {
+  display: none;
+}
+
+#tooltip {
+  background-color: #120204;
+  padding: 1rem 1.2rem;
+  font-weight: 600;
+}
+
+#my-keen-slider {
+  position: static;
+  z-index: 400;
+}
+
+[class^=number-slide],
+[class*=" number-slide"] {
+  background: #140305;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 500;
+  height: 600px;
+  max-height: 100vh;
+  position: relative;
+  z-index: -1;
+}
+
+.number-slide img {
+  height: 100%;
+}
+
 #shop {
   display: grid;
   justify-items: center;
@@ -302,6 +272,11 @@ h2{
   flex-flow: column nowrap;
   align-items: center;
   max-width: 250px;
+  border-radius: 1rem;
+  transition: 250ms ease-in-out;
+}
+#shop .wine:hover {
+  background-color: #240609;
 }
 #shop .wine .img-wrapper {
   text-align: center;
@@ -355,6 +330,5 @@ h2{
   background-color: white;
   color: #58181F;
 }
-
 
 /*# sourceMappingURL=main.css.map */
