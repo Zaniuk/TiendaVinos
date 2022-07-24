@@ -1,15 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Italiana&family=Junge&family=Kaisei+HarunoUmi:wght@400;500;700&display=swap");
-body {
-  margin: 0;
-  font-family: "Junge", serif;
-  background-color: #080101;
-}
-
 #logo {
-  top: 2vh;
-  left: 2vh;
-  height: 13vh;
-  position: fixed;
+  position: relative;
+  top: 0.5vw;
+  left: 1vw;
+  z-index: 1000;
+  width: 16vw;
+  min-width: 150px;
+  height: 7vw;
+  min-height: 80px;
 }
 
 #menu-icon {
@@ -23,48 +21,49 @@ body {
   cursor: pointer;
   z-index: 1000;
   background-color: #120204;
-  position: fixed;
-  right: 4vh;
-  top: 4vh;
+  position: absolute;
+  right: 2vw;
+  top: 1.5vw;
+  background-color: rgba(18, 2, 4, 0);
 }
 
 .hide-menu {
   position: fixed;
-  top: 4vh;
-  right: 4vh;
 }
 
 .line1,
 .line2,
 .line3 {
-  width: 10vh;
-  height: 1.6vh;
-  margin: 0.5vh;
+  width: 5vw;
+  min-width: 50px;
+  height: 0.8vw;
+  min-height: 10px;
+  margin: 0.25vw;
   background-color: #B11226;
   transition: 0.3s;
 }
 
 .hide .line1 {
-  transform: translate(0, 2vh) rotate(-405deg);
-  position: fixed;
+  transform: translate(0, 1vw) rotate(-405deg);
+  position: relative;
 }
 
 .hide .line2 {
-  transform: translate(0vh, 2vh) rotate(-405deg);
+  transform: translate(0vw, 0vw) rotate(-405deg);
   position: relative;
 }
 
 .hide .line3 {
-  transform: translate(0vh, -0.8vh) rotate(-490deg);
-  position: fixed;
+  transform: translate(0vh, -1vw) rotate(-490deg);
+  position: relative;
 }
 
 .navbar {
-  background-color: #080101;
+  background-color: rgba(8, 1, 1, 0);
   position: static;
   top: 0;
   width: 100%;
-  height: 15vh;
+  height: 7vw;
 }
 .navbar .navbar-flex {
   display: flex;
@@ -79,10 +78,10 @@ body {
   text-align: center;
   transition: transform 0.3s ease;
   transform: translate(0, -100%);
-  top: 0vh;
-  bottom: 0vh;
-  left: 0vh;
-  right: 0vh;
+  top: -10vh;
+  bottom: -10vh;
+  left: -10vh;
+  right: -10vh;
   background-color: #120204;
 }
 .navbar .desplegable .desplegable-conte {
@@ -90,7 +89,7 @@ body {
 }
 .navbar .desplegable .linea-contenido-sola {
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
   display: block;
   font-size: 5vh;
   margin-top: 5vh;
@@ -116,6 +115,12 @@ body {
   top: 0;
   background-color: #120204;
   transform: translate(0, 0);
+}
+
+body {
+  margin: 0;
+  font-family: "Junge", serif;
+  background-color: rgb(8, 1, 1);
 }
 
 .container {
@@ -184,24 +189,6 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  #logo {
-    position: absolute;
-  }
-
-  .menu {
-    top: 40px;
-    right: 8px;
-  }
-
-  .line1, .line2, .line3 {
-    width: 5vh;
-    height: 0.8vh;
-  }
-
-  #menu-icon {
-    height: 100px;
-  }
-
   #featured {
     flex-flow: column;
     justify-content: center;
@@ -298,8 +285,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
-  /* number of lines to show */
+  -webkit-line-clamp: 1; /* number of lines to show */
   line-clamp: 1;
   -webkit-box-orient: vertical;
 }
@@ -309,8 +295,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
-  /* number of lines to show */
+  -webkit-line-clamp: 1; /* number of lines to show */
   line-clamp: 1;
   -webkit-box-orient: vertical;
 }
