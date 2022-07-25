@@ -261,27 +261,6 @@ body {
   justify-content: space-around;
 }
 
-@media screen and (max-width: 800px) {
-  #featured {
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-  }
-  #featured .title {
-    width: 80%;
-  }
-  #featured .menu-wrapper {
-    height: max-content;
-    width: 100%;
-    order: 3;
-  }
-  #featured .menu-wrapper ul {
-    width: 100%;
-    padding: 0;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
 .hide-tooltip {
   display: none;
 }
