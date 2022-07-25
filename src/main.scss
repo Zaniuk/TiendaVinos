@@ -1,7 +1,6 @@
 @use "./scss/resed";
 @use "./scss/heder";
 @use "./scss/variables";
-@use "./scss/media";
 
 body{
     margin: 0;
@@ -77,6 +76,28 @@ body{
             display: flex;
             flex-flow: column nowrap;
             justify-content: space-around;
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    #featured{
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+       
+        .title{
+            width: 80%;
+        }
+        .menu-wrapper {
+            height: max-content;
+            width: 100%;
+            order: 3;
+            ul{
+                width: 100%;
+                padding: 0;
+                flex-direction: row;
+                justify-content: space-around;
+            }
         }
     }
 }
