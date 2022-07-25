@@ -1,15 +1,4 @@
-//fonts
-$heading: 'Italiana', serif;
-$heading2: 'Kaisei HarunoUmi', serif;
-$menu: 'Junge', serif;
-// Colors
-$olive: #9E6C16;
-$strong-wine: #B11226;
-$dark-wine: #58181F;
-$card-dark-wine: #140305;
-$card-dark-wine-hover: #240609;
-$dark: #120204;
-$lblue: #0075C4;
+@use "./variables";
 //Lucas
 #logo{
     position: relative;
@@ -17,14 +6,14 @@ $lblue: #0075C4;
     left: 1vw;
     z-index: 1000;
     width: 16vw;
-    min-width: 150px;
+    min-width:80px ;
     height: 7vw;
-    min-height: 80px;
+    min-height: 45px;
 }
 #menu-icon{
     cursor: pointer;
     z-index: 1000;
-    background-color: $dark;
+    background-color: variables.$dark;
 }
     
     
@@ -32,14 +21,14 @@ $lblue: #0075C4;
     flex-direction: column;
     cursor: pointer;
     z-index: 1000;
-    background-color: #{$dark};
+    background-color: variables.$dark;
     position: absolute;
     right: 2vw;
     top: 1.5vw;
     background-color: #12020400;
 }
 .hide-menu{
-    position: fixed;
+    position: absolute;
 
 }
     
@@ -47,11 +36,9 @@ $lblue: #0075C4;
 .line2,
 .line3{
     width: 5vw;
-    min-width: 50px;
     height: 0.8vw;
-    min-height: 10px;
     margin: 0.25vw;
-    background-color: $strong-wine;
+    background-color: variables.$strong-wine;
     transition: 0.3s;
     }
     
@@ -84,7 +71,7 @@ $lblue: #0075C4;
 
     .desplegable{
     position: fixed;
-    font-family: var($heading2);
+    font-family: var(variables.$heading2);
     list-style: none;
     font-size: x-large;
     font-style: italic;
@@ -95,7 +82,7 @@ $lblue: #0075C4;
     bottom: -10vh;
     left: -10vh;
     right: -10vh;
-    background-color: $dark;
+    background-color: variables.$dark;
     .desplegable-conte{
         margin-top: 0vh;
     }
@@ -113,7 +100,7 @@ $lblue: #0075C4;
     margin-top: 20vh;
 }
 .linea-contenido-sola{
-    background-image: linear-gradient(#ffffff, $dark);
+    background-image: linear-gradient(#ffffff, variables.$dark);
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 2px;
@@ -126,6 +113,6 @@ $lblue: #0075C4;
 
 .desplegable.active{
     top: 0;
-    background-color: $dark;
+    background-color: variables.$dark;
     transform: translate(0,0);
 }

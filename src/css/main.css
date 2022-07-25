@@ -5,9 +5,9 @@
   left: 1vw;
   z-index: 1000;
   width: 16vw;
-  min-width: 150px;
+  min-width: 80px;
   height: 7vw;
-  min-height: 80px;
+  min-height: 45px;
 }
 
 #menu-icon {
@@ -28,16 +28,14 @@
 }
 
 .hide-menu {
-  position: fixed;
+  position: absolute;
 }
 
 .line1,
 .line2,
 .line3 {
   width: 5vw;
-  min-width: 50px;
   height: 0.8vw;
-  min-height: 10px;
   margin: 0.25vw;
   background-color: #B11226;
   transition: 0.3s;
@@ -117,6 +115,81 @@
   transform: translate(0, 0);
 }
 
+@media screen and (max-width: 800px) {
+  .menu {
+    right: 1.5vw;
+    top: 1.7vw;
+  }
+  .line1,
+.line2,
+.line3 {
+    width: 50px;
+    height: 8px;
+    margin: 3px;
+  }
+  .hide .line1 {
+    transform: translate(0, 11px) rotate(-405deg);
+    position: relative;
+  }
+  .hide .line2 {
+    transform: translate(0vw, 0px) rotate(-405deg);
+    position: relative;
+  }
+  .hide .line3 {
+    transform: translate(0vh, -11px) rotate(-490deg);
+    position: relative;
+  }
+  .navbar {
+    height: 60px;
+  }
+  #featured {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #featured .title {
+    width: 80%;
+  }
+  #featured .menu-wrapper {
+    height: max-content;
+    width: 100%;
+    order: 3;
+  }
+  #featured .menu-wrapper ul {
+    width: 100%;
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 300px) {
+  .menu {
+    right: 4vw;
+    top: 3vw;
+  }
+  .line1,
+.line2,
+.line3 {
+    width: 15vw;
+    height: 2.2vw;
+    margin: 0.75vw;
+  }
+  .hide .line1 {
+    transform: translate(0, 2.9vw) rotate(-405deg);
+    position: relative;
+  }
+  .hide .line2 {
+    transform: translate(0vw, 0vw) rotate(-405deg);
+    position: relative;
+  }
+  .hide .line3 {
+    transform: translate(0vh, -2.9vw) rotate(-490deg);
+    position: relative;
+  }
+  .navbar {
+    height: 16vw;
+  }
+}
 body {
   margin: 0;
   font-family: "Junge", serif;
