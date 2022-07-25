@@ -28,7 +28,7 @@
 }
 
 .hide-menu {
-  position: absolute;
+  position: fixed;
 }
 
 .line1,
