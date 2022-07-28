@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,13 @@
     <title>Wine Valley</title>
     <link rel="stylesheet" href="./css/main.css">
     <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/keen-slider@6.7.0/keen-slider.min.css"
+  />
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
 </head>
+
 <body>
     <header class="navbar">
         <div class="navbar-flex">
@@ -27,21 +34,8 @@
             </nav>
     </header>
     <main class="container">
-        <section class="landing">
-            <div class="text-box">
-                <h1>"A good wine makes special any ocassion"</h1>
-            </div>
-        </section>
-        <section class="landing">
-            <div class="text-box">
-                <h1>"Life is too short to drink bad wine"</h1>
-            </div>
-        </section>
-        <section class="landing">
-            <div class="text-box">
-                <h1>"Wine is bottled poetry"</h1>
-            </div>
-        </section>
+        
+        
         <section id="featured">
             <div class="title">
                 <h1>OUR BEST SELLER</h1>
@@ -56,31 +50,57 @@
             </div>
             <div class="menu-wrapper">
                 <ul>
-                    <li id="button">
+                    <li id="button1" class="button-tooltip">
                         <span>SEC</span>
-                        <div id="tooltip" role="tooltip">I'm a tooltip</div>
+                        <div id="tooltip" class="hide-tooltip" role="tooltip">Dry wine</div>
                     </li>
-                    <li>ALB</li>
-                    <li>12.5%</li>
-                    <li>750ml</li>
-                    <li>Italy</li>
+                    <li id="button2" class="button-tooltip">
+                        <span>ALB</span>
+                        <div id="tooltip" class="hide-tooltip" role="tooltip">Alvarinho</div>
+                    </li>
+                    <li id="button3" class="button-tooltip">
+                        <span>12.5%</span>
+                        <div id="tooltip" class="hide-tooltip" role="tooltip">Alcohol volume</div>
+                    </li>
+                    <li id="button4" class="button-tooltip">
+                        <span>750ml</span>
+                        <div id="tooltip" class="hide-tooltip" role="tooltip">How many ml are in</div>
+                    </li>
+                    <li id="button5" class="button-tooltip">
+                        <span>Italy</span>
+                        <div id="tooltip" class="hide-tooltip" role="tooltip">Made in</div>
+                    </li>
                 </ul>
             </div>
-
-    
-     <div class="content-all">
-        <div class="content-carrusel">
-       
-       <figure><img src="../public/img/Imagenes vinos/img1.jpg" ></figure>
-       <figure><img src="../public/img/Imagenes vinos/img2.jpg" ></figure>
-       <figure><img src="../public/img/Imagenes vinos/img3.jpg" ></figure>
-       <figure><img src="../public/img/Imagenes vinos/img4.jpg" ></figure>
-       <figure><img src="../public/img/Imagenes vinos/img5.jpg" ></figure>
-       <figure><img src="../public/img/Imagenes vinos/img6.jpg" ></figure>
+            
 
         </section>
-
-
+        <div class="c-wrapper">
+            <div id="my-keen-slider" class="keen-slider">
+                <div class="keen-slider__slide number-slide">
+                    <img src="./public/carr/img1.jpg" alt="">
+                </div>
+                <div class="keen-slider__slide number-slide">
+                    <img src="./public/carr/img2.jpg" alt="">
+                </div>
+                <div class="keen-slider__slide number-slide">
+                    <img src="./public/carr/img3.jpg" alt="">
+                </div>
+                <div class="keen-slider__slide number-slide">
+                    <img src="./public/carr/img4.jpg" alt="">
+                </div>
+                <div class="keen-slider__slide number-slide">
+                    <img src="./public/carr/img5.jpg" alt="">
+                </div>
+                <div class="keen-slider__slide number-slide">
+                    <img src="./public/carr/img6.jpg" alt="">
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.7.0/keen-slider.min.js"></script>
+            <script>
+                var slider = new KeenSlider("#my-keen-slider")
+            </script>
+        </div>
         <section id="shop">
             <div class="wine">
                 <div class="img-wrapper">
@@ -288,7 +308,6 @@
                         <li><img src="./public/icons/flag.svg">Bourgogne</li>
                     </ul>
                     <a href="#" class="btn-buy">19,90€</a>
-
                 </div>
             </div>
             <div class="wine">
@@ -322,10 +341,102 @@
                     </ul>
                     <a href="#" class="btn-buy">19,90€</a>
                 </div>
+            </div>
+            
 
+            <div class="wine">
+                <div class="img-wrapper">
+                    <img src="./public/img/wine-bottles/pUJHLZWdSOWU2dUOyzpRKw_pb_x600.png" alt="LA CHABLISIENNE">
+                </div>
+                <div class="content">
+                    <h1>Fiore Podere San Biagio</h1>
+                    <h2>Cafone Colli Aprutini Rosso</h2>
+                    <ul>
+                        <li><img src="./public/icons/wine-glass.svg">Red</li>
+                        <li><img src="./public/icons/wine-bottle.svg">Central Italy Red</li>
+                        <li><img src="./public/icons/grapes.svg">Montepulciano</li>
+                        <li><img src="./public/icons/flag.svg">Colli Aprutini</li>
+                    </ul>
+                    <a href="#" class="btn-buy">19,90€</a>
+                </div>
+            </div>
+            
+
+
+
+            
+            <div class="wine">
+                <div class="img-wrapper">
+                    <img src="./public/img/wine-bottles/arg1.png" alt="LA CHABLISIENNE">
+                </div>
+                <div class="content">
+                    <h1>Rutini</h1>
+                    <h2>Dominio Malbec - Cabernet Franc</h2>
+                    <ul>
+                        <li><img src="./public/icons/wine-glass.svg">Red</li>
+                        <li><img src="./public/icons/wine-bottle.svg">Argentina Mix</li>
+                        <li><img src="./public/icons/grapes.svg">Mix</li>
+                        <li><img src="./public/icons/flag.svg">Valle de Uco</li>
+                    </ul>
+                    <a href="#" class="btn-buy">22,90€</a>
+                </div>
+            </div>
+            <div class="wine">
+                <div class="img-wrapper">
+                    <img src="./public/img/wine-bottles/arg2.png" alt="LA CHABLISIENNE">
+                </div>
+                <div class="content">
+                    <h1>El Enemigo</h1>
+                    <h2>Malbec 2017</h2>
+                    <ul>
+                        <li><img src="./public/icons/wine-glass.svg">Red</li>
+                        <li><img src="./public/icons/wine-bottle.svg">Mendoza</li>
+                        <li><img src="./public/icons/grapes.svg">Malbec</li>
+                        <li><img src="./public/icons/flag.svg">Mendoza</li>
+                    </ul>
+                    <a href="#" class="btn-buy">22,90€</a>
+                </div>
+            </div>
+            <div class="wine">
+                <div class="img-wrapper">
+                    <img src="./public/img/wine-bottles/arg3.png" alt="LA CHABLISIENNE">
+                </div>
+                <div class="content">
+                    <h1>El Enemigo</h1>
+                    <h2>Cabernet Franc 2017</h2>
+                    <ul>
+                        <li><img src="./public/icons/wine-glass.svg">Red</li>
+                        <li><img src="./public/icons/wine-bottle.svg">Argentina Mix</li>
+                        <li><img src="./public/icons/grapes.svg">Cabernet Franc</li>
+                        <li><img src="./public/icons/flag.svg">Mendoza</li>
+                    </ul>
+                    <a href="#" class="btn-buy">22,90€</a>
+                </div>
+            </div>
+            <div class="wine">
+                <div class="img-wrapper">
+                    <img src="./public/img/wine-bottles/arg4.png" alt="LA CHABLISIENNE">
+                </div>
+                <div class="content">
+                    <h1>El Enemigo</h1>
+                    <h2>Chardonnay 2018</h2>
+                    <ul>
+                        <li><img src="./public/icons/wine-glass.svg">Red</li>
+                        <li><img src="./public/icons/wine-bottle.svg">Mendoza Chardonnay</li>
+                        <li><img src="./public/icons/grapes.svg">Chardonnay</li>
+                        <li><img src="./public/icons/flag.svg">Mendoza</li>
+                    </ul>
+                    <a href="#" class="btn-buy">22,90€</a>
+                </div>
+            </div>
+
+
+                
         </section>
     </main>
 
     <script src="./js/app.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 </body>
+
 </html>

@@ -1,16 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Italiana&family=Junge&family=Kaisei+HarunoUmi:wght@400;500;700&display=swap");
-body {
-  margin: 0;
-  font-family: "Junge", serif;
-  background-color: #070707;
-}
-
 #logo {
-  top: 2vh;
-  left: 2vh;
-  height: 13vh;
   position: relative;
+  top: 0.5vw;
+  left: 1vw;
   z-index: 1000;
+  width: 16vw;
+  min-width: 80px;
+  height: 7vw;
+  min-height: 45px;
 }
 
 #menu-icon {
@@ -24,48 +21,47 @@ body {
   cursor: pointer;
   z-index: 1000;
   background-color: #120204;
-  position: fixed;
-  right: 4vh;
-  top: 4vh;
+  position: absolute;
+  right: 2vw;
+  top: 1.5vw;
+  background-color: rgba(18, 2, 4, 0);
 }
 
 .hide-menu {
   position: fixed;
-  top: 4vh;
-  right: 4vh;
 }
 
 .line1,
 .line2,
 .line3 {
-  width: 10vh;
-  height: 1.6vh;
-  margin: 0.5vh;
+  width: 5vw;
+  height: 0.8vw;
+  margin: 0.25vw;
   background-color: #B11226;
   transition: 0.3s;
 }
 
 .hide .line1 {
-  transform: translate(0, 2vh) rotate(-405deg);
-  position: fixed;
+  transform: translate(0, 1vw) rotate(-405deg);
+  position: relative;
 }
 
 .hide .line2 {
-  transform: translate(0vh, 2vh) rotate(-405deg);
+  transform: translate(0vw, 0vw) rotate(-405deg);
   position: relative;
 }
 
 .hide .line3 {
-  transform: translate(0vh, -0.8vh) rotate(-490deg);
-  position: fixed;
+  transform: translate(0vh, -1vw) rotate(-490deg);
+  position: relative;
 }
 
 .navbar {
-  background-color: #120204;
-  position: fixed;
+  background-color: rgba(8, 1, 1, 0);
+  position: static;
   top: 0;
   width: 100%;
-  height: 15vh;
+  height: 7vw;
 }
 .navbar .navbar-flex {
   display: flex;
@@ -80,10 +76,10 @@ body {
   text-align: center;
   transition: transform 0.3s ease;
   transform: translate(0, -100%);
-  top: 0vh;
-  bottom: 0vh;
-  left: 0vh;
-  right: 0vh;
+  top: -10vh;
+  bottom: -10vh;
+  left: -10vh;
+  right: -10vh;
   background-color: #120204;
 }
 .navbar .desplegable .desplegable-conte {
@@ -91,7 +87,7 @@ body {
 }
 .navbar .desplegable .linea-contenido-sola {
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
   display: block;
   font-size: 5vh;
   margin-top: 5vh;
@@ -119,6 +115,67 @@ body {
   transform: translate(0, 0);
 }
 
+@media screen and (max-width: 800px) {
+  .menu {
+    right: 1.5vw;
+    top: 1.7vw;
+  }
+  .line1,
+.line2,
+.line3 {
+    width: 50px;
+    height: 8px;
+    margin: 3px;
+  }
+  .hide .line1 {
+    transform: translate(0, 11px) rotate(-405deg);
+    position: relative;
+  }
+  .hide .line2 {
+    transform: translate(0vw, 0px) rotate(-405deg);
+    position: relative;
+  }
+  .hide .line3 {
+    transform: translate(0vh, -11px) rotate(-490deg);
+    position: relative;
+  }
+  .navbar {
+    height: 60px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .menu {
+    top: 3vw;
+  }
+  .line1,
+.line2,
+.line3 {
+    width: 15vw;
+    height: 2.2vw;
+    margin: 0.75vw;
+  }
+  .hide .line1 {
+    transform: translate(0, 2.9vw) rotate(-405deg);
+    position: relative;
+  }
+  .hide .line2 {
+    transform: translate(0vw, 0vw) rotate(-405deg);
+    position: relative;
+  }
+  .hide .line3 {
+    transform: translate(0vh, -2.9vw) rotate(-490deg);
+    position: relative;
+  }
+  .navbar {
+    height: 16vw;
+  }
+}
+body {
+  margin: 0;
+  font-family: "Junge", serif;
+  background-color: rgb(8, 1, 1);
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -133,95 +190,11 @@ body {
   background-color: #120204;
   color: #B11226;
 }
-*{
-  margin: 0;
-  padding: 0%;
-  box-sizing: border-box;
-}
-
-body{
-
-  background-color:blanchedalmond
-}
-
-
-h2{
+.container .landing {
   text-align: center;
-  font-size: 60px;
-  font-family: JUNGE;
-  margin-top: 80px;
-  color: brown;
-  text-shadow: 0px 0px 6px beige;
-
-
+  display: flex;
+  justify-content: center;
 }
-
-
-.content-all{
-  width: 230px;
-  margin: auto;
-  perspective: 1000PX;
-  position: relative;
-  margin-top: 50px;
-}
-
-
-.content-carrusel{
-  width: 100%;
-  position: absolute;
-  animation: rotar 10s infinite linear;
-  transform-style: preserve-3d;
-}
-.content-carrusel:hover{
-  animation-play-state: paused;
-  cursor: pointer;
-
-}
-
-.content-carrusel figure{
-  width: 100%;
-  height: 140%;
-  position: absolute;
-  
-  box-shadow: 0px 0px 20px 0px black;
-}
-
-.content-carrusel figure:nth-child(1){transform: rotateY(0deg)translateZ(300PX)
-  ;}
-.content-carrusel figure:nth-child(2){transform: rotateY(60deg)translateZ(300PX)
-  ;}
-.content-carrusel figure:nth-child(3){transform: rotateY(120deg)translateZ(300PX)
-  ;}
-.content-carrusel figure:nth-child(4){transform: rotateY(180deg)translateZ(300PX)
-  ;}
-.content-carrusel figure:nth-child(5){transform: rotateY(240deg)translateZ(300PX)
-  ;}
-.content-carrusel figure:nth-child(6){transform: rotateY(300deg)translateZ(300PX)
-  ;}
-.content-carrusel figure:nth-child(7){transform: rotateY(360deg)translateZ(300PX)
-  ;}
-
-
-.content-carrusel img{
-  width: 100%;
-
-
-}
-
-.content-carrusel img:hover{
-  transform:  scale(1.2);
-  transition: all 300ms;
-}
-
-
-@keyframes rotar{
-  from{transform: rotateY(0deg);  
-   }to{transform: rotateY(360deg);
-
-}
-}
-
-
 
 #featured {
   background-image: url("../../public/img/backgrounds/marvin-l-61sZcZl3Mlk-unsplash (1).jpg");
@@ -274,6 +247,9 @@ h2{
     justify-content: center;
     align-items: center;
   }
+  #featured .title {
+    width: 80%;
+  }
   #featured .menu-wrapper {
     height: max-content;
     width: 100%;
@@ -286,6 +262,40 @@ h2{
     justify-content: space-around;
   }
 }
+.hide-tooltip {
+  display: none;
+}
+
+#tooltip {
+  background-color: #120204;
+  padding: 1rem 1.2rem;
+  font-weight: 600;
+}
+
+#my-keen-slider {
+  position: static;
+  z-index: 400;
+}
+
+[class^=number-slide],
+[class*=" number-slide"] {
+  background: #140305;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 500;
+  height: 600px;
+  max-height: 100vh;
+  position: relative;
+  z-index: -1;
+}
+
+.number-slide img {
+  height: 100%;
+}
+
 #shop {
   display: grid;
   justify-items: center;
@@ -302,6 +312,11 @@ h2{
   flex-flow: column nowrap;
   align-items: center;
   max-width: 250px;
+  border-radius: 1rem;
+  transition: 250ms ease-in-out;
+}
+#shop .wine:hover {
+  background-color: #240609;
 }
 #shop .wine .img-wrapper {
   text-align: center;
@@ -323,8 +338,7 @@ h2{
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
-  /* number of lines to show */
+  -webkit-line-clamp: 1; /* number of lines to show */
   line-clamp: 1;
   -webkit-box-orient: vertical;
 }
@@ -334,8 +348,7 @@ h2{
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
-  /* number of lines to show */
+  -webkit-line-clamp: 1; /* number of lines to show */
   line-clamp: 1;
   -webkit-box-orient: vertical;
 }
@@ -355,6 +368,5 @@ h2{
   background-color: white;
   color: #58181F;
 }
-
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,184 @@
+@use "./variables";
+//Lucas
+#logo{
+    position: relative;
+    top: 0.5vw;
+    left: 1vw;
+    z-index: 1000;
+    width: 16vw;
+    height: 7vw;
+}
+#menu-icon{
+    cursor: pointer;
+    z-index: 1000;
+    background-color: variables.$dark;
+}
+    
+    
+.menu{
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: variables.$dark;
+    position: absolute;
+    right: 2vw;
+    top: 1.5vw;
+    background-color: #12020400;
+}
+.hide-menu{
+    position: fixed;
+
+}
+    
+.line1,
+.line2,
+.line3{
+    width: 5vw;
+    height: 0.8vw;
+    margin: 0.25vw;
+    background-color: variables.$strong-wine;
+    transition: 0.3s;
+    }
+    
+
+.hide .line1{
+    transform: translate(0,1vw)rotate(-405deg);
+    position: relative;
+}
+    
+.hide .line2{
+    transform:  translate(0vw,0vw)rotate(-405deg);
+    position: relative;
+}
+    
+.hide .line3{
+    transform: translate(0vh,-1vw)rotate(-490deg);
+    position: relative;
+}
+
+.navbar{
+    background-color: rgba(8, 1, 1, 0);
+    position: static;
+    top: 0;
+    width: 100vw;
+    height: 7vw;
+    .navbar-flex{
+        display: flex;
+        align-items: center;
+    }
+
+    .desplegable{
+    position: fixed;
+    font-family: var(variables.$heading2);
+    list-style: none;
+    font-size: x-large;
+    font-style: italic;
+    text-align: center;
+    transition: transform 0.3s ease;
+    transform: translate(0,-100%);
+    top: -10vh;
+    bottom: -10vh;
+    left: -10vh;
+    right: -10vh;
+    background-color: variables.$dark;
+    .desplegable-conte{
+        margin-top: 0vh;
+    }
+    .linea-contenido-sola{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        display: block;
+        font-size: 5vh;
+        margin-top: 5vh;
+
+    }
+            }
+    }
+#linea-contenido1{
+    margin-top: 20vh;
+}
+.linea-contenido-sola{
+    background-image: linear-gradient(#ffffff, variables.$dark);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    
+}
+.linea-contenido-sola:hover, .linea-contenido-sola:focus {
+    background-size: 100% 0.2vh;
+}
+
+.desplegable.active{
+    top: 0;
+    background-color: variables.$dark;
+    transform: translate(0,0);
+}
+
+//medidas
+
+@media screen and (max-width: 800px) {
+    .menu{
+        right: 2vw;
+        top: 2vw;
+    }
+    .line1,
+    .line2,
+    .line3{
+        width: 50px;
+        height: 8px;
+        margin: 3px;;
+        }
+        
+    
+    .hide .line1{
+        transform: translate(0,11px)rotate(-405deg);
+        position: relative;
+    }
+        
+    .hide .line2{
+        transform:  translate(0vw,0px)rotate(-405deg);
+        position: relative;
+    }
+        
+    .hide .line3{
+        transform: translate(0vh,-11px)rotate(-490deg);
+        position: relative;
+    }
+    
+.navbar{
+    height: 60px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .menu{
+        top: 3vw;
+    }
+    .line1,
+    .line2,
+    .line3{
+        width: 15vw;
+        height: 2.2vw;
+        margin: 0.75vw;;
+        }
+        
+    
+    .hide .line1{
+        transform: translate(0,2.9vw)rotate(-405deg);
+        position: relative;
+    }
+        
+    .hide .line2{
+        transform:  translate(0vw,0vw)rotate(-405deg);
+        position: relative;
+    }
+        
+    .hide .line3{
+        transform: translate(0vh,-2.9vw)rotate(-490deg);
+        position: relative;
+    }
+    
+    .navbar{
+        height: 16vw;
+        }
+}
